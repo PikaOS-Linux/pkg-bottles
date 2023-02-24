@@ -12,7 +12,8 @@ cd ./adw-gtk3
 apt-get build-dep ./ -y
 
 # Build package
-DEBUILD_TGZ_CHECK=no debuild -us -uc
+dh_make --createorig
+dpkg-buildpackage
 
 # Move the debs to output
 cd ../
