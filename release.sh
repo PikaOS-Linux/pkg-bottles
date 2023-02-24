@@ -5,10 +5,10 @@ dpkg-sig --sign builder ./output/packageNameHere*.deb
 rsync -azP --exclude '*.deb' ferreo@pika-os.com:/srv/www/pikappa/ ./output/repo
 
 # Remove our existing package from the repo
-reprepro -V --basedir ./output/repo/ removefilter kinetic 'Package (% packageNameHere*)'
+reprepro -V --basedir ./output/repo/ removefilter kinetic 'Package (% adw-gtk3-theme*)'
 
 # Add the new package to the repo
-reprepro -V --basedir ./output/repo/ includedeb kinetic ./output/packageNameHere*.deb
+reprepro -V --basedir ./output/repo/ includedeb kinetic ./output/adw-gtk3-theme*.deb
 
 # Push the updated ppa repo to the server
 rsync -azP ./output/repo/ ferreo@pika-os.com:/srv/www/pikappa/
