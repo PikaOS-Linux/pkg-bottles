@@ -12,4 +12,4 @@ cd ./adw-gtk3
 apt-get build-dep ./ -y
 
 # Build binaries
-echo -ne 'y'  | debuild -us -uc
+debuild -us -uc --no-tgz-check
