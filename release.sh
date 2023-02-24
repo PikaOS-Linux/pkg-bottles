@@ -1,5 +1,5 @@
 # Sign the packages
-dpkg-sig --sign builder ./output/packageNameHere*.deb
+dpkg-sig --sign builder ./output/adw-gtk3-theme*.deb
 
 # Pull down existing ppa repo db files etc
 rsync -azP --exclude '*.deb' ferreo@pika-os.com:/srv/www/pikappa/ ./output/repo
