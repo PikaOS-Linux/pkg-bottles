@@ -11,5 +11,10 @@ cd ./adw-gtk3
 # Get build deps
 apt-get build-dep ./ -y
 
-# Build binaries
-debuild -us -uc --no-tgz-check
+# Build package
+dpkg-buildpackage --no-tgz-check
+
+# Move the debs to output
+cd ../
+mkdir -p ./output
+mv ./*.deb ./output/
