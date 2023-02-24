@@ -12,4 +12,4 @@ cd ./adw-gtk3
 sudo apt-get build-dep ./
 
 # Build binaries
-echo -ne '\n'  | debuild -us -uc
+echo -ne 'y'  | debuild -us -uc
