@@ -1,5 +1,5 @@
 # Clone Upstream
-git clone https://github.com/bottlesdevs/Bottles -b 51.6 ./bottles
+git clone https://github.com/bottlesdevs/Bottles -b 51.9 ./bottles
 cp -rvf ./debian ./bottles/
 cd ./bottles
 
